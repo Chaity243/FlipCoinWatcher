@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardElevation="3dp"
+    android:background="@color/colorWhite"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:gravity="center_vertical"
+      android:weightSum="1">
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight=".75"
+          android:orientation="vertical">
+          <!-- Text Coin Name -->
+          <TextView
+              android:id="@+id/tv_coin_id"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:padding="3dp"/>
+
+          <!-- Text Coin Description -->
+          <TextView
+              android:id="@+id/tv_coin_symbol"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="3dp" />
+
+          <!-- Text Coin FilePath -->
+          <TextView
+              android:id="@+id/tv_coin_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="12sp"
+              android:padding="3dp"/>
+
+      </LinearLayout>
+      <Button
+          android:id="@+id/btn_add"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight=".25"
+          android:layout_marginLeft="8dp"
+          android:textColor="@color/colorWhite"
+          android:background="@color/colorPrimary"
+          android:text="Add"/>
+
+  </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
