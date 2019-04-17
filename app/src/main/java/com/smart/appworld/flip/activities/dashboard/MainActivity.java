@@ -96,10 +96,12 @@ public class MainActivity extends AppCompatActivity implements CoinsListFragment
     }
 
     private void initFragment(Fragment fragment) {
+
+
         String backStateName = fragment.getClass().getName();
-        // Add the CoinsListFragment to the layout
         FragmentManager fragmentManager = getSupportFragmentManager();
 
+        //Check if fragment is already present or not
         boolean fragmentPresent =  fragmentManager.getFragments().contains(fragmentManager.findFragmentByTag (backStateName));
 
         if(!fragmentPresent)
@@ -110,7 +112,9 @@ public class MainActivity extends AppCompatActivity implements CoinsListFragment
             transaction.commit();
         }
         else {
-            fragmentManager.popBackStack(backStateName,POP_BACK_STACK_INCLUSIVE);
+
+            // use already stored fragment
+            fragmentManager.popBackStack(backStateName,0);
         }
     }
 
